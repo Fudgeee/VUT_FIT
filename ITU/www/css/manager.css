@@ -1,0 +1,436 @@
+/*
+*@brief stylování managerského modulu
+*@autors Marián Backa
+*/
+
+#mngr{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+/* table */
+#mngr table{
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    min-width: 250px;
+}
+/* Table wraps to center it */
+#mngr .t3{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#mngr .t2{
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+    margin: 1.1rem 0rem 3.5rem 0rem;
+}
+
+
+#mngr .t1{
+    width: 100%;
+}
+/* table rows/cells styles */
+#mngr .thead th{
+    font-size: 1.1rem;
+    color: #000;
+    background-color: #72bce7;
+    font-weight: unset;
+}
+
+#mngr thead tr{
+    height: 3rem;
+}
+
+#mngr tbody tr{
+    font-size: 1rem;
+    color: #494949;
+    line-height: 1.8;
+    font-weight: unset;
+    text-align: center;
+}
+
+#mngr tbody tr.top{
+    line-height:2.1rem;
+    font-size: 1.2rem;
+    background-color: #b0d9f1;
+    color: black;
+}
+
+#mngr tbody tr:nth-child(even){
+    background-color: #f0efef;
+}
+
+#mngr thead td{
+    margin: 0px;
+    padding: 2px 0px;
+}
+
+/* Style buttons */
+#mngr a{
+    text-decoration: none;
+    color: black;
+}
+
+#mngr th a {
+    width: 100%;
+    display: inline-block;
+}
+
+#mngr a:visited{
+    color: black;
+}
+/* Style items per page/current page*/
+#mngr .pages td{
+    text-align: right;
+    background-color: #72bce7;
+    padding-right: 5px;
+}
+
+#mngr .pages td a{
+    padding: 5px 5px;
+}
+/* Style filters */
+#mngr .filters td{
+    position: relative;
+    overflow: hidden;
+}
+
+#mngr .filters a{
+    background-color: #72bce7;
+    padding: 0.85rem;
+    border-radius: 10px;
+    line-height: 2.8rem;
+    margin-left: 0.2rem;
+}
+
+#mngr .filters a:hover{
+    background-color: rgb(109, 235, 252);
+    transition: 1s;
+}
+
+#mngr .filters a:active{
+    background-color: rgb(86, 222, 240);
+}
+
+#mngr .acceptinput{
+    background-color: #72bce7;
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: black;
+    border-color: rgb(63, 230, 29);
+    float: right;
+    margin: 0rem 0.3rem;
+    font-weight: bolder;
+}
+
+#mngr .acceptinput:hover{
+    background-color: rgb(109, 235, 252);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#mngr .deniedinput:hover{
+    background-color: rgb(109, 235, 252);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#mngr .filters td{
+    background-color: white;
+    overflow: hidden;
+}
+/* style text that shows when table is empty */
+#mngr .emptytable{
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    background-color: #f0efef;
+}
+/* special style for selected filter */
+#mngr a.cakajuce, #mngr a.zamietnute, #mngr a.schvalene, #mngr a.vsetky{
+    color: white;
+    background-color: rgb(48, 159, 211);
+}
+
+#mngr .currentpage, #mngr .currentpagesize{
+    background-color: rgb(188, 224, 241);   
+    border-radius: 0.5rem;
+}
+
+#mngr .deniedinput{
+    background-color: #72bce7;
+    padding: 0.8rem;
+    margin: 0rem 0.3rem;
+    border-radius: 10px;
+    color:black;
+    float: right;
+    border-color: rgb(255, 0, 76);
+    font-weight: bolder;
+}
+#mngr .thead th.a{
+    cursor: pointer;
+}
+#mngr .thead th.popis{
+    cursor: default;
+}
+
+#mngr #buttons{
+    margin: 0px;
+    padding:0px;
+    display: inline-block;
+    float: right;
+    margin-top: 1px;
+}
+
+#mngr #categhories{
+    padding: 0px;
+    margin:0px;
+    display:inline-block;
+}
+
+#mngr tr.setkyzobr.green.table1{
+    background-color: rgb(179, 253, 182);
+    box-sizing: border-box;
+    
+}
+#mngr tr.setkyzobr.white.table1{
+    background-color: white;
+    box-sizing: border-box;
+    
+}
+#mngr tr.setkyzobr.red.table1{
+    background-color: rgb(248, 176, 176);
+    box-sizing: border-box;
+    
+}
+
+#mngr .pages p{
+    margin: 0px;
+    padding: 0px 5px;
+    display: inline;
+    color: white;
+}
+
+#mngr .pages td.itmspp{
+    text-align: left;
+}
+
+#mngr .thead th a {
+    font-size: 1.1rem;
+}
+
+/*special border for current order filter*/
+#mngr .jmenodec, #mngr .prijmenidec, #mngr .autodec, #mngr .datumzdec, #mngr .datumkdec{
+    border-top: rgb(19, 6, 199);
+    border-top-style: solid;
+    border-width: 5px;
+}
+#mngr .jmeno, #mngr .prijmeni, #mngr .auto, #mngr .datumz, #mngr .datumk{
+    border-bottom: rgb(19, 6, 199);
+    border-bottom-style: solid;
+    border-width: 4px;
+}
+
+
+/*tablet/phone responsive design*/
+@media only screen and (max-width: 992px), (max-device-width: 992px)  {
+    #mngr .t3{
+        overflow: hidden;
+    }
+    #mngr .mngr-btn{
+        left: 0px;
+        transition: 0 !important;
+    }
+    #mngr .centrujem{
+        left: 132px;
+        transition: 0 !important;
+    }
+    
+
+    #mngr #buttons {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        height: 2.7rem;
+        z-index: 2;
+        bottom: -2px;
+        right: 0px;
+        background-color: #1276ae;
+        border-radius: 10px;
+        border-width: 10px;
+    }
+
+    #mngr .t2{
+        padding: 10px;
+    }
+
+    #mngr .acceptinput {
+        padding: 0.6rem;
+        margin: 0.1rem 0.5rem;
+    }
+
+    #mngr thead tr.filters {
+        height: 4.5rem;
+    }
+
+    #mngr #categhories a{
+        line-height: 1.5rem;
+    }
+
+    #mngr .deniedinput {
+        padding: 0.6rem;
+        margin: 0.1rem 0.5rem;
+    }
+
+    #mngr #buttons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #mngr #categhories{
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+        padding: 0.8rem;
+        
+    }
+
+    #mngr #vse{
+        display: none;
+    }
+    #mgr #buttons{
+        position: sticky;
+    }
+    #mngr .t3{
+        width: 65vw;
+    }
+    /* table rebuilding for small displays */
+   #mngr tr.table1{
+       padding-top: 0.25rem;
+   }
+   
+	#mngr table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+
+    #mngr thead tr.thead { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	#mngr tr {
+         border: 1px solid #ccc; 
+    }
+	
+	#mngr .table1 td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+
+	}
+	
+    #mngr .table1 td.itm { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+
+	#mngr .table1 td.itm:before { 
+		position: absolute;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+	#mngr .table1 td.itm:nth-of-type(1):before { content: "Jméno"; }
+	#mngr td.itm:nth-of-type(2):before { content: "Přijmění"; }
+	#mngr td.itm:nth-of-type(3):before { content: "Auto"; }
+	#mngr td.itm:nth-of-type(4):before { content: "Datum začátku R."; }
+	#mngr td.itm:nth-of-type(5):before { content: "Datum konce R."; }
+    #mngr td.itm:nth-of-type(6):before { content: "Popis"; }
+	#mngr .pages td.itmspp{
+        display: inline-block;
+        box-sizing: border-box;
+        float: left;
+    }
+    #mngr tr.pages{
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #72bce7;
+    }
+   
+}
+
+@media only screen and (max-width: 700px), (max-device-width: 700px){
+    #mngr .mngr-btn{
+        left: 4px;
+        transition: 0 !important;
+    }
+}
+
+/*phone responsive design*/
+@media only screen and (max-width: 576px), (max-device-width: 576px){
+
+
+    #mngr .t3{
+        width: 96vw;
+    }
+
+    #mngr .filters a {
+        padding: 0.6rem;
+    }
+
+    #mngr .acceptinput{
+        padding: 0.6rem;
+    }
+    
+    #mngr .deniedinput{
+        padding: 0.6rem;
+    }
+
+   
+}
+/* small phone responsive design*/
+@media only screen and (max-width: 360px), (max-device-width: 360px){
+
+    
+    mgr tr.thead{
+      margin-top: 8rem;
+    }
+
+     #mngr .t3{
+        width: 100vw;
+    }
+  
+    #mngr .filters a {
+      padding: 0.3rem;
+    } 
+
+    #mngr .acceptinput{
+        padding: 0.3rem;
+    }
+    
+    #mngr .deniedinput{
+        padding: 0.3rem;
+    }
+}
+

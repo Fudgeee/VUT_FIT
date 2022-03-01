@@ -1,0 +1,416 @@
+/*
+*@brief dashboard styly
+*@autors Adrián Matušík (xmatus35)
+*/
+#db{
+    width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.db-img,
+#db-add{
+    display: block;
+    float: left;
+    width: 380px;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: black;
+    border: 4px solid white;
+}
+.db-img p,
+#db-add p{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+#db img{
+    display: block;
+    width: 372px;
+    height: 240px;
+    cursor: pointer;
+    opacity: 30%;
+    transition: 1.5s;
+}
+#db img:hover{
+    opacity: 100%;
+    transition: 2s;
+}
+.db hr{
+    clear: both;
+}
+#db h1{
+    padding: 30px 0px 30px 10px;
+}
+#db-add img{
+    opacity: 90%;
+}
+.btn-hover{
+    opacity: 50% !important;
+}
+.db-img-popis{
+    position: absolute;
+    padding: 10px 15px;
+    margin: 0 auto;
+    left: 50px;
+    top: 12px;
+    display: none;
+    opacity: 100%;
+    z-index: 25;
+}
+.db-img p:first-child{
+    color: red;
+    font-weight: 600;
+    font-size: 32px;
+    padding-top: 10px;
+}
+.hidden{
+    display: unset;
+}
+#btn{
+    opacity: 90%;
+    position: absolute;
+    margin: 77.5px 150px;
+    height: 80px;
+    line-height: 80px;  
+    width: 80px;  
+    font-size: 4em;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #40A9F2;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    z-index: 50;
+}
+#btn:hover{
+    height: 90px;
+    width: 90px;
+    margin: 72.5px 145px;
+    line-height: 90px;
+    font-size: 5em;
+    transition: 0.5s;
+}
+#db a{
+    text-decoration: none;
+    color: white;
+}
+#db i{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: 100%;
+    z-index: 25;
+    font-size: 20px;
+    color: white;
+}
+#db  i:hover{
+    cursor: pointer;
+    color: red;
+}
+#i1{
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+    opacity: 100%;
+    z-index: 25;
+    font-size: 35px !important;
+    color: white;
+    width: fit-content;
+}
+#i1:hover,
+#i5:hover{
+    color: red;
+}
+.aaa{
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.aaa:hover{
+    color: red;
+}
+#i3,
+#i4,
+#i5{
+    font-size: 25px;
+    color: black;
+    width: fit-content;
+}
+#i7{
+    color: greenyellow;
+}
+#i3,
+#i4{
+    padding: 0 15px;
+}
+#i4,
+#i6{
+    color: red;
+}
+#i3:hover,
+#i4:hover{
+    color: greenyellow;
+}
+.db-img,
+#db-add{
+    border-radius: 20px;
+}
+.db-img img,
+#db-add img{
+    border-radius: 15px;
+}
+.reservation-details{
+    width: 94.5%;
+    height: 95%;
+    margin: 5% auto;
+    display: block;
+    overflow: auto;
+    border-radius: 20px;
+    background-color: lightsteelblue;
+    opacity: 100%;
+    position: relative;
+}
+.reservation-details h1{
+    margin: 20px auto;
+    width: fit-content;
+    color: black;
+    font-weight: 700;
+    font-size: 40px;
+}
+.reservation-details hr{
+    width: 95%;
+    margin: 0 auto;
+    color: black;
+    border-top: 2px solid black;
+}
+#btn-close{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background-color: transparent;
+    font-size: 50px;
+    border: none;
+    overflow: none;
+}
+#btn-close:hover{
+    cursor: pointer;
+    color: red;
+}
+.reservation-details-popis{
+    width: 35%;
+    margin: 20px auto 0px;
+    padding-left: 50px;
+    display: block;
+    float: left;
+}
+.reservation-details-popis h2{
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.reservation-details-popis p{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+.reservation-details-img{
+    float: left;
+    width: 65%;
+    margin: 70px auto 0px;
+}
+.reservation-details-img img{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+.reservation-p{
+    width: fit-content !important;
+}
+.clear-float{
+    clear: both;
+    width: 100%;
+}
+#btn-delete{
+    margin: 30px auto 50px;
+    width: fit-content;
+
+}
+#btn-delete a{
+    font-size: 30px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 3px solid #40A9F2;
+    border-radius: 15px;
+    color: black;
+}
+#btn-delete a:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    border: 3px solid red;
+
+}
+#locknutie{
+    text-align: center;
+    width: 146.2px;
+    right: 80px;
+    font-size: 28px;
+    position: absolute;
+    bottom: 50px;
+}
+.lock-btn{
+    background-color: #40A9F2;
+    float: left;
+    width: 66.1px;
+    border: 3px solid black;
+    margin: 0 3.5px;
+    border-radius: 10px;
+}
+.lock-btn:hover{
+    border: 3px solid red;
+}
+.lock-btn i{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    padding: 5px 0 7px;
+}
+.lock-btn i:hover{
+    color: red;
+}
+#user-managment{
+    width: 94.5%;
+    height: 95%;
+    margin: 5% auto;
+    display: block;
+    overflow: auto;
+    border-radius: 20px;
+    background-color: lightsteelblue;
+    opacity: 100%;
+    position: relative;
+}
+#user-managment h1{
+    font-size: 40px;
+    padding-left: 50px;
+    margin: 20px 0;
+    color: black;
+    font-weight: 500;
+    padding-right: 450px;
+    float: left;
+}
+#user-managment p{
+    font-size: 30px;
+    margin: 25px 0;
+    float: left;
+}
+#user-p{
+    font-size: 30px;
+    margin: 25px;
+    display: inline-block;
+}
+#user-managment hr{
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    border-top: 5px solid black;
+}
+#full-thead{
+    height: 50px;
+    background-color: white;
+    
+}
+#full-thead th{
+    width: 200px;
+    margin: 0 auto;
+}
+#full-tbody td{
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid white;
+}
+.icon-bg,
+.icon-bg1{
+    background-color: blue;
+    padding: 15px 0px 8px;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 1500px){
+    #db{
+        width: 800px;
+        margin: 0 auto; 
+    }
+    .reservation-details-popis{
+        padding-left: 20px;
+    }
+}
+@media only screen and (max-width: 1215px){
+    .reservation-details-popis{
+        padding-left: 0px;
+    }
+    .reservation-details-img img{
+        width: 80%;
+    }
+    .reservation-details-popis{
+        width: 40%;
+    }
+    .reservation-details-img{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .reservation-details-popis{
+        width: 45%;
+    }
+    .reservation-details-img{
+        width: 55%;
+    }
+    .reservation-details-img img{
+        width: 90%;
+    }
+    .clear-float{
+        display: none;
+    }
+    #btn-delete{
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 1050px){
+    #db{
+        width: 400px;
+        margin: 0 auto; 
+    }
+}
+@media only screen and (max-width: 960px){
+    .reservation-details-popis{
+        width: 100%;
+    }
+    .reservation-details-img{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .reservation-details-img img{
+        width: 80%;
+    }
+    #btn-delete{
+        display: block;
+        margin: 30px auto;
+    }
+    .reservation-details{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        margin: 0;
+    }
+}

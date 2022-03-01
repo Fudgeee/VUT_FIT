@@ -1,0 +1,4 @@
+Allow from all
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>

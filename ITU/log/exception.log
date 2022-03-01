@@ -1,0 +1,1 @@
+[2021-11-01 12-15-53] ParseError: syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in /var/www/html/iisProject/app/Presenters/HomepagePresenter.php:13  @  http://localhost/iisProject/www/  @@  exception--2021-11-01--12-15--c6dca68854.html

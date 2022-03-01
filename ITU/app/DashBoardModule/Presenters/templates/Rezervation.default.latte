@@ -1,0 +1,47 @@
+<!---
+    @brief detail rezervácii šablona
+    @autor Adrián Matušík (xmatus35)
+--->
+{block content}
+    <div class="reservation-details">
+        <a n:href=":DashBoard:DashBoard: " class=menuItem><button type="button" id="btn-close">&times;</button></a>
+        <h1>{$reservation->ref('car', 'ID_car')->brand}</h1>
+        <hr>
+        <div class="reservation-details-popis">
+            <h2>Popis</h2>
+            <p><b>Typ:</b> {$reservation->ref('car', 'ID_car')->drive}</p>
+            <p><b>Stav nádrže:</b> {$reservation->ref('car', 'ID_car')->tank} %</p>
+            <p><b>Dojazd:</b> {$reservation->ref('car', 'ID_car')->dojezd} km</p>
+            <p><b>Počet sedadiel:</b> {$reservation->ref('car', 'ID_car')->seats}</p>
+            <p><b>Prevodovka:</b> {$reservation->ref('car', 'ID_car')->prevodovka}</p>
+            <br><hr><br>
+            <p class="reservation-p"><b>Dátum Rezervácie:</b> {$reservation->datum_rezervacie|date: 'd.m.Y h:i'}</p>
+            <p class="reservation-p"><b>Dátum Vrátenia:</b> {$reservation->datum_vratenia|date: 'd.m.Y h:i'}</p>
+            <p class="reservation-p"><b>Dôvod:</b> {$reservation->dovod}</p>
+            <p class="reservation-p"><b>Stav rezervácie:</b> {if $reservation->schvalene == 0}Čakajúca
+                            {elseif $reservation->schvalene == 1}Schválená{else}Zamietnutá{/if}</p>
+        </div>
+        <div class="reservation-details-img">
+            <img class="reservation-class" src="{$basePath}/ITUimg/{$reservation->ID_car}.png">
+        </div>
+        <div class="clear-float"></div>
+        <div id="btn-delete">
+            <a href="{link DeleteReservation! $reservation->ID}">Zrušiť rezerváciu</a>
+        </div>
+        <div id="locknutie">
+            {snippet lock}
+                {if $reservation->ref('car', 'ID_car')->lock == 0}
+                    Zamknuté
+                {else}
+                    Odomknuté
+                {/if}   
+            {/snippet} 
+            <div class="lock-btn">
+                <a n:href="LockLock! $reservation->ID_car"><i class="fas fa-lock"></i></a>
+            </div>
+            <div class="lock-btn">
+                <a n:href="UnlockLock! $reservation->ID_car"><i class="fas fa-lock-open"></i></a>
+            </div>
+        </div>
+    </div>
+{/block content}
