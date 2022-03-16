@@ -12,22 +12,22 @@
 #include <ctype.h>
 #include <string.h>
 
-int *NE = NULL;
-int *NR = NULL;
-int *TE = NULL;
-int *TR = NULL;
+int *NE = NULL;	// pocet elfov
+int *NR = NULL; // pocet sobov
+int *TE = NULL; // Maximální doba v milisekundách, po kterou skřítek pracuje samostatně
+int *TR = NULL; // Maximální doba v milisekundách, po které se sob vrací z dovolené domů
 int *elfID = NULL;
 int *rdID = NULL;
-int *counter = NULL;
-FILE *out = NULL;
+int *counter = NULL; // pocitadlo jednotlivych procesov
+FILE *out = NULL; //output subor
 int *reindeer_count = NULL;
 int *reindeer_count2 = NULL;
 int *elf_count = NULL;
 int *santa_control = NULL;
 int *elf_count2 = NULL;
-bool *christmas = NULL;
-bool issleeping = false;
-bool *vrateny = NULL;
+bool *christmas = NULL; // kontrola ci su vianoce
+bool issleeping = false; // kontrola ci santa spi
+bool *vrateny = NULL; // kontrola ci su vrateny vsetci sobovia z dovolenky
 
 sem_t *s_write;
 sem_t *s_elf;
@@ -42,7 +42,7 @@ sem_t *s_zatvorene;
 sem_t *s_christmas;
 
 void free_all();
-
+//funkcia na inicializaciu semaforov a premennych + kontrola suboru a kontrola inicializovanych semaforov a premennych
 int init(){
 	out = fopen("proj2.out","w"); 
 	if (out == NULL){
@@ -212,6 +212,7 @@ int init(){
 	}
 	return error;
 }
+// funkcia  ktora sluzi na samotny vypis
 void mywrite(char* action, int is, int ID){
 	sem_wait(s_write);
 	if (is == 1){
@@ -229,6 +230,7 @@ void mywrite(char* action, int is, int ID){
 	fflush(out);
 	sem_post(s_write);
 }
+// funkcia volania santu, v ktorej sa kontroluje ci santa spi, pomaha elfom, zatvara workshop alebo zacina vianoce 
 void santa(){
 	if (issleeping == false){ 
 		mywrite("going to sleep", 0, 0);
@@ -264,6 +266,7 @@ void santa(){
 	sem_post(s_santa_control);	
 	santa();
 }
+// funkcia volania elfa, ktory moze pracu zacat, ziadat o pomoc santu ak ziadaju traja elfovia, moze dostat pomoc ak nie su vianoce a ak su vianoce tak si elfovia zoberu dovolenku
 void elf(){
 	srand(getpid());
 	sem_wait(s_elf);
@@ -293,6 +296,7 @@ void elf(){
 	mywrite("taking holidays", 1, elf_ID);
 	exit(0);
 }
+// funkcia volajuca sobov, ktori mozu zacat, vratit sa z dovolenky a ked sa vsetci vratia tak volaju santu aby ich zapriahol, a santa vtedy zatvori dielnu a zapriahne sobov
 void reindeer(){
 	srand(getpid());
 	sem_wait(s_reindeer);
@@ -325,6 +329,7 @@ void reindeer(){
 	sem_post(s_reindeer_santa);
 	exit(0);
 }
+// funkcia na kontrolu ci su stringy (zadane argumenty) zlozene len z cisiel
 bool ismydigit(char *pole){
 	int dlzka = strlen(pole);
 	for (int x = 0; x < dlzka; x++){
@@ -334,6 +339,7 @@ bool ismydigit(char *pole){
 	}
 	return true;
 }
+// funkcia na uvolnenie vsetkych semaforov a premennych
 void free_all(){
 	int error = 0;
 	if (sem_destroy(s_write) == -1){
@@ -399,6 +405,7 @@ void free_all(){
 	munmap(christmas, sizeof(bool));
 	munmap(vrateny, sizeof(bool));
 }
+// main funkcia, kontroluje spravny pocet argumentov a ci su argumenty len z cisiel a v spravnych rozsahoch
 int main(int argc, char *argv[]){
 	if (argc == 5){
 		if (ismydigit(argv[1]) && ismydigit(argv[2]) && ismydigit(argv[3]) && ismydigit(argv[4])){
