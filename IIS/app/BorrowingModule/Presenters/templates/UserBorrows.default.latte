@@ -1,0 +1,26 @@
+{block content}
+<div id="user-borrows">
+	<h1>Moje výpůjčky</h1>
+	<table>
+	<tr>
+		<th>Titul</th>
+		<th>Stav</th>
+		<th>Knihovna</th>
+		<th>Datum vydani</th>
+		<th>nutno vrátit do</th>
+		<th>detaily</th>
+	</tr>
+    {foreach $vypujcky as $vypujcka}
+		<tr>
+			<td><a href="{link :Book:Kniha:show $vypujcka->ID_titul}">{$vypujcka->ID_titul}</a></td>
+			<td>{$vypujcka->stav} </td>
+			<td><a href="{link :Library:ViewLibrary: $vypujcka->ID_knihovna}">{$vypujcka->ID_knihovna}</a></td>
+			<td>{$vypujcka->datum_vydano} </td>
+			<td>{if $vypujcka->datum_vydano }{$vypujcka->datum_vydano->modifyClone('+'.(($vypujcka->prodlouzeni+1)*14).' day')}{/if} </td>
+			<td><a n:href="Borrow: $vypujcka->ID">Detaily</a></td>
+
+		</tr>
+	{/foreach}
+	</table>
+</div>
+{/block}

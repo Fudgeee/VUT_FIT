@@ -1,0 +1,30 @@
+{block content}
+<div id="lib-books">
+	<div id="lib-books-back">
+		<a n:href=":Library:Library:  $libName">Zpět</a>
+	</div>
+	<h1>Knihy v knihovně:{$libName}</h1>
+	<a n:href=':Order:Orders: $libName'>Přehled objednávek</a>
+	<br><br>
+	<a n:href="LibBookManualAdd: $libName">Přidat titul manuálně do knihovny</a>
+	<div class="medzera"></div>
+	<table id="lib-books-table">
+	<tr>
+		<th>Jméno titulu</th>
+		<th>Celkový počet</th>
+		<th>Aktuálně půjčeno</th>
+		<th>K dispozici</th>
+		<th>Editace počtu</th>
+	</tr>
+    {foreach $books as $book}
+		<tr>
+			<td>{$book->ID}</td>
+			<td>{$book->mnozstvi}</td>
+			<td>{$book->vydano}</td>
+			<td>{$book->mnozstvi-$book->vydano}</td>
+			<td><a n:href="LibBookManualEdit: $libName,$book->ID">Editovat</a></td>
+		</tr>
+	{/foreach}
+	</table>
+</div>
+{/block}

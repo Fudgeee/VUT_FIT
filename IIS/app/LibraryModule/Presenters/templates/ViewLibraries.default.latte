@@ -1,0 +1,16 @@
+{block content}
+<div id="libraries-view">
+	<h1>Naše knihovny</h1>
+	<div id="libraries-list">
+		{if $knihovny}
+			<ol>
+			{foreach $knihovny as $knihovna}
+				<div class="knihovnaItem">
+					<li><a href="{link ViewLibrary: $knihovna->ID}">{$knihovna->ID}</a></li>
+				</div>
+			{/foreach}
+			</ol>
+		{/if}
+	</div>
+</div>
+{/block}

@@ -1,0 +1,30 @@
+{block content}
+<div id="library-addk">
+	<div id="library-addk-back">
+		<a n:href=":Library:Library: $libName">Zpět</a>
+	</div>
+	<h1>Knihovníci knihovny: {$libName}</h1>
+	<table id="library-addk-table">
+	<tr>
+		<th>Jméno</th>
+		<th>Přijmení</th>
+		<th>Login</th>
+		<th>Odstranit</th>
+	</tr>
+    {foreach $knihovniks as $knihovnik}
+		<tr>
+			<td>{$knihovnik->meno} </td>
+			<td>{$knihovnik->priezvisko} </td>
+			<td>{$knihovnik->ID}</td>
+			<td><a href="{link deleteKnihovnik! $libName,$knihovnik->ID}">Zbavit zprávy</a></td>
+		</tr>
+    {/foreach}
+	</table>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+	<div id="library-addk-formular">
+		{control addKnihovnikForm }
+	</div>
+</div>
+{/block}

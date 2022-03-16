@@ -1,0 +1,12 @@
+{block content}
+<div id="lib-books-manual-edit">
+    <div id="lib-books-manual-edit-back">
+        <a n:href="LibBooks: $poskytuje->ID_knihovna">Zpět</a>
+    </div>
+    <h1>Editovat počet titulů: "{$poskytuje->ID_titul}" v knihovně: {$poskytuje->ID_knihovna} </h1>
+    <p>Varování: záznam se odstraní po návratu všech knih</p>
+    <div id="lib-books-manual-edit-formular">
+        {control bookEditForm }
+    </div>
+</div>
+{/block}
