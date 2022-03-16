@@ -1,0 +1,572 @@
+/*dokumentacia*/
+/*nakolko su tu vsetko jednoduche prikazy, tam si nie som isty co take by som k nim napisal,
+ kedze je jednoznacne co ako funguje a ktory prikaz co robi, tak len zhrniem moj postup prace.
+projekt som vypracovaval nasledovne: vytvoril som si najskor celu stranku na mobil (zariadenia mensie ako 576px)
+hlavne menu ma nastavenu fixnutu poziciu na vrchu stranky, pouzivam na vacsinu elementov border-box, pre ulahcenie vypoctov
+nakolko ma skoro kazdy element nejaky margin/padding, ulozenie jednotlivych blokov vedla seba robim cez floaty,
+texty na stranke su na 99% z lorem ipsum a nakoniec som spravil stranku responzivnu na viacero rozliseni,
+jednotlive zmeny som robil na sirkach: 576,768,992,1200px, zmeny su robene podla mna, co je inak ako boli robene
+na cvikach, maximalna sirka okna je 1200px, ak je okno sirsie, tak je obsah centrovany na stred.
+Link na stranku na hoste sa vam zobrazi po kliknuti na moju fotku alebo meno*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-image: linear-gradient(135deg, #37adff, white);
+    width: 100%;
+    overflow: hidden;
+    padding-top: 54px;
+}
+#header-info{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+#header-info img{
+    display: block;
+    margin: 0 auto;
+	border-radius: 50%;
+    width: 230px;
+    padding: 50px;
+}
+#header-info h1{
+    width: auto;
+    font-size: 3.5rem;
+    color: #2765E8;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#header-info dl{
+    padding-top: 30px;
+    margin-top: 0;
+}
+hr{
+    border-top: 1px dotted black;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    clear: both;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+dt{
+    float: left;
+    font-weight: bold;
+}
+dd{
+    padding-left: 200px;
+}
+a{
+    text-decoration: none;
+    color: #2765E8;
+}
+nav{
+    background-color: rgb(175, 175, 175);
+    width: 100%;
+    position: fixed;
+    z-index: 55;
+}
+nav ul{
+    list-style-type: none;
+ }
+nav ul li{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(175, 175, 175);
+}
+#zahlavi{
+    margin: 0;
+    padding: 0;
+}
+#zahlavi li {
+    box-sizing: border-box;
+    display: inline-block;  
+}
+#zahlavi li a{
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: black;
+}
+#zahlavi a:hover,
+#zahlavi a:focus{ 
+    background-color: gray;
+    padding: 1rem;  
+}
+#zahlavi li.nav2{
+    display: none;
+}
+#lastli{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(160, 160, 160);
+}
+i{
+    font-size: 2rem;
+    padding-right: 2px;
+}
+#navg.navv.responsive {
+    position: relative;
+}
+#navg.navv.responsive li.nav2{ /* trieda responsive otvori hamburger menu*/
+    clear: both;
+    display: block;
+    text-align: left;
+    width: 100%;
+    background-color: rgb(175, 175, 175);
+    border-top: 0.5px solid #e3e3e3;
+}
+#navg.navv.responsive.odsad{
+    padding-top: 250px;
+}
+main{
+    background-image: linear-gradient(to right, lightgray, white);
+}
+main section{
+    padding: 1rem;
+}
+#about{
+    padding: 1rem;
+    padding-top: 5rem;
+    font-size: 1.5rem;
+}
+#about h1{
+    color: #FF4258;
+    font-style: italic;
+    text-align: center;
+}
+#experience{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+#experience h1{
+    color: #FF4258;
+    font-style: italic;
+    text-align: center;
+}
+#experience h3{
+    color: #2765E8;
+}
+#education{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+}
+#education h1{
+    color: #FF4258;
+    font-style: italic;
+    margin-bottom: 100px;
+    text-align: center;
+}
+#education h3{
+    color: #2765E8;
+}
+#education p{
+    font-size: 1rem;
+    padding-bottom: 50px;
+    color: gray;
+}
+#skills{
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-top: 3rem;
+}
+#skills h1{
+    color: #FF4258;
+    font-style: italic;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.lang{
+    float: left;
+}
+.lang img{
+    width: 100px;
+    height: 100px;
+}
+.langpython{
+    float: left;
+}
+.langpython img{
+    width: 85px;
+    padding: 7.5px;
+}
+.langcss{
+    float: left;
+}
+.langcss img {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 7.5px;
+}
+.langjava{
+    float: left;
+    box-sizing: border-box;
+}
+.langjava img{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 7.5px 0;
+}
+#skills p{
+    clear: both;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+#interests{
+    padding: 1rem;
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    background-image: linear-gradient(45deg, #37adff, white);
+}
+#interests h1{
+    color: #FF4258;
+    font-style: italic;
+    text-align: center;
+}
+#navigacia2{
+    background-color: #37adff;
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#navigacia2 ul{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+ }
+#navigacia2 ul li{
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    background-color: #37adff;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #2765E8;
+}
+#navigacia2 ul li:last-child{
+    border-bottom: none;
+}
+#navigacia2 ul li a{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+#sports{
+    padding-top: 70px;
+    width: 100%;
+}
+#sports h2{
+    color: green;
+    font-style: italic;
+    text-align: center;
+}
+#fitko {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#fitko img{
+    width: 100%;
+}
+#cars{
+    padding-top: 70px;
+    width: 100%;
+}
+#cars h2{
+    color: green;
+    font-style: italic;
+    text-align: center;
+}
+#auto {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#auto img{
+    width: 100%;
+}
+#games{
+    padding-top: 70px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+#games h2{
+    color: green;
+    font-style: italic;
+    text-align: center;
+}
+#hra {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#hra img{
+    width: 100%;
+}
+footer{
+    background-color: black;
+}
+#foot{
+    padding: 0.5rem 1rem;
+    color: white;
+}
+@media only screen and (min-width: 576px){ /* pre zariadenia ktore maju sirku okna aspon 576px*/
+    #jedna{
+        display: block;
+        width: 50%;
+        box-sizing: border-box;
+        padding-right: 1rem;
+        float: left;
+    }
+    #dva{
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        padding-left: 1rem;
+    }
+}
+@media only screen and (min-width: 768px){ /* pre zariadenia ktore maju sirku okna aspon 768px*/
+    dd{
+        padding-left: 50px;
+        clear: both;
+    }
+    #zahlavi li.nav2{
+        display: inline;
+    }
+    #zahlavi li{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #zahlavi li:first-child{
+        padding-left: 0;
+    }
+    #zahlavi li a{
+        width: unset
+    }
+    nav #lastli{
+        display: none;
+    }
+    #zahlavi li.nav2 span{
+        display: none;
+    }
+    #header-jedna{
+        padding-top: 50px;
+        width: 50%;
+        box-sizing: border-box;
+        display: block;
+        float: left;
+    }
+    #header-dva{
+        padding-left: 5%;
+        width: 45%;
+        box-sizing: border-box;
+        display: inline-block;
+        padding-top: 150px;
+    }
+    #about{
+        clear: both;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    #skills-jedna{
+        width: 50%;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        display: block;
+        float: left;
+    }
+    #skills-img{
+        padding-top: 75px;
+        padding-left: 1rem;
+    }
+    #skills-dva{
+        padding-left: 1rem;
+        width: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+    #navg ul li:hover .text {
+        display: unset;
+      }
+}
+@media only screen and (min-width: 992px){ /* pre zariadenia ktore maju sirku okna aspon 992px*/
+    #zahlavi li{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    #zahlavi li.nav2 span{
+        display: unset;
+    }
+    dd{
+        padding-left: 100px;
+    }
+    #skills h1{
+        padding-bottom: 30px;
+    }
+    #fitko{
+        width: 45%;
+        display: block;
+        float: left;
+        padding-top: 24px;
+    }
+    #sports p{
+        width: 55%;
+        box-sizing: border-box;
+        display: inline-block;
+        padding-left: 1rem;
+    }
+    #cars{
+        clear: both;
+    }
+    #auto{
+        width: 45%;
+        float: right;
+        padding-top: 24px;
+    }
+    #cars p{
+        padding-top: 24px;
+        width: 55%;
+        box-sizing: border-box;
+        display: block;
+        padding-right: 1rem;
+
+    }
+    #games{
+        clear: both;
+    }
+    #hra{
+        width: 45%;
+        display: block;
+        float: left;
+        padding-top: 24px;
+        padding-bottom: 30px;
+    }
+    #games p#p1{
+        width: 55%;
+        box-sizing: border-box;
+        display: inline-block;
+        padding-left: 1rem;
+    }
+    #games p#p2{
+        clear: both;
+    }
+    #jedna{
+        padding: 1rem;
+    }
+    #dva{
+        padding-top: 13px;
+        padding-bottom: 50px;
+        padding-right: 1rem;
+        padding-left: 0;
+    }
+}
+@media only screen and (min-width: 1200px){ /* pre zariadenia ktore maju sirku okna aspon 1200px*/
+    #zahlavi,
+    #header-info,
+    #about,
+    #experience,
+    #education,
+    #skills,
+    #last,
+    #foot{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #zahlavi li{
+        padding-right: 2rem; 
+    }
+    #navg ul li.nav2:nth-child(2){
+        display: none;
+    }
+    #header-spolu{
+        width: 45%;
+        float: left;
+        box-sizing: border-box;
+        display: block;
+    }
+    #header-jedna{
+        padding-top: 0;
+        width: 100%;
+    }
+    #header-dva{
+        clear: both;
+        width: 100%;
+        padding-top: 0;
+    }
+    dt{
+        float: left;
+    }
+    dd{
+        padding-left: 180px;
+        clear: right;
+    }
+    #header-info{
+        overflow: hidden;
+    }
+    #about h1{
+        display: none;
+    }
+    #about{
+        padding-left: 7%;
+        width: 48%;
+        box-sizing: border-box;
+        display: inline-block;
+        padding-top: 50px;
+    }  
+    #skills-jedna h3{
+        padding-left: 1rem;
+    }
+    header{
+        padding-bottom: 3.5rem;
+    }
+    hr{
+        margin-bottom: 12rem;
+    }
+    #education{
+        padding-bottom: 15rem;
+    }
+    #skills{
+        padding-bottom: 6rem;
+    }
+    #sports{
+        padding-bottom: 10rem;
+    }
+    #cars{
+        padding-bottom: 12rem;
+    }
+    #fitko{
+        width: 50%;
+    }
+    #sports p{
+        width: 45%;
+        padding-left: 5%;
+    }
+    #auto{
+        width: 50%;
+    }
+    #cars p{
+        width: 45%;
+        padding-right: 5%;
+    }
+    #sports h2{
+        padding-bottom: 2rem;
+    }
+    #cars h2{
+        padding-bottom: 4rem;
+    }
+}
