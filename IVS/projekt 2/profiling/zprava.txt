@@ -1,0 +1,6 @@
+#Zaver profilingu
+
+Pre profiling sme pouzili modul cProfile a výpočet smerodatnej odchýlky pre 10 - 1 000 000 hodnôt.
+Funkcie z našej knižnice math_lib takmer vôbec neovplyvnili výsledný čas výpočtu až na 2 funkcie:
+pow() - umocnenie a add() - scitanie, ktoré sa volali najviac zo všatkých funkcií. Sú implementované
+pomocou vstavanej knižnice math, v ktorej sú najoptimalizovanejšie. 

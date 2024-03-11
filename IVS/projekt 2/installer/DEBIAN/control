@@ -1,0 +1,6 @@
+Package: Calculator
+Version: 1.0
+Maintainer: To je jedno
+Architecture: all
+Description: Calulator by To je jedno
+Depends: python3, python3-pip, doxygen, make, python3-tk
