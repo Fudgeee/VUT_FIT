@@ -1,1 +1,0 @@
-# Úvod do softwarového inženýrství
