@@ -1,1 +1,0 @@
-# Signály a systémy
