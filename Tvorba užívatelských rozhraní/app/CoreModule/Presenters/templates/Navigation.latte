@@ -1,0 +1,70 @@
+<!---
+@brief navigace
+@autor Jakub Komárek (xkomar33)
+--->
+{block Navigation}
+<div id="navigace">
+    <nav>
+        <button type="button" id=navButonClose>&times;</button>
+        <h2 class="hiden">Our car</h2>
+        <img src = "{$basePath}/img/largeLogo.svg" alt="Large logo"/>
+        <ul>
+            <li><a n:href=":DashBoard:DashBoard: " class=menuItem id=prehled>Přehled</a></li>
+            <li><a n:href=":Borow:Borow: " class=menuItem id=rezervovat>Rezervovat</a></li>
+            {if $user->isAllowed('managerModule')}
+                <li><a n:href=":Manager:Manager: " class=menuItem id=sprava>Správa Rezervací</a></li>
+                <li><a n:href=":FullSystem:Full: " class="menuItem noajax" id=full>Správa Užívatelů</a></li>
+            {/if}
+            <li><a n:href=":Extention:Extention: " class="menuItem noajax" id=extention>Správa Aut</a></li>
+        </ul>
+        <ul class="shiftDown">
+            <li><a n:href=":User:UserEdit: " class=menuItem id=profil>Profil</a></li>
+            <li><a n:href="logout!">Odhlášení</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+
+	$(document).ready(function(){
+        var boxWidth = $("#navigace").width();
+        $("#navButonClose").click(function(){  
+            $("#navigace").animate({
+                width: 0 
+            },"fast");
+            $("#blockA").animate({
+                width: 0 
+            },"fast");
+            $(".rezervateMenu").removeClass('support');
+        });
+        $("#navButonClose").click(function(){  
+            $("#navigace").animate({
+                width: 0 
+            },"fast");
+            $("#blockA").animate({
+                width: 0 
+            },"fast");
+            $(".mngr-btn").removeClass('centrujem');
+        });
+        $("#navButonOpen").click(function(){
+            $("#navigace").show();
+            $("#navigace").animate({
+                width: $('#navigace').css('max-width')
+            },"fast");
+            $("#blockA").animate({
+                width: boxWidth
+            },"fast");
+             $(".rezervateMenu").addClass('support');
+             $(".mngr-btn").addClass('centrujem');
+        });
+        $('.menuItem').click(function(){  
+            if($(window).width()<700)
+            {
+                $("#navigace").animate({
+                width: 0 
+                },100);
+            };
+        });
+    });
+</script>
+{/block Navigation}

@@ -1,0 +1,54 @@
+<!---
+    @brief dashboard šablona
+    @autor Adrián Matušík (xmatus35)
+--->
+{block content}  
+<div id="user-managment">
+    <h1>Správa Užívatelov</h1>
+    <p><b>Počet užívatelov :</b> 
+        {snippet count}
+            <span id="user-p">{$count['all']}</span>
+        {/snippet}
+    </p>
+    <hr>
+{snippet wholeList}
+    <table n:snippet="items">
+        <thead id="full-thead">
+            <tr>
+                <th>Meno</th>
+                <th>Priezvisko</th>
+                <th>Email</th>
+                <th>Rola</th>
+                <th>Overený</th>
+                <th>Odstraniť</th>
+            </tr>
+        </thead>
+        <tbody id="full-tbody">
+            {foreach $list as $id => $item}
+                <tr n:snippet="item-$id" >  
+                    <td>{$item->ref('user', 'ID')->name}</td>
+                    <td>{$item->ref('user', 'ID')->surname}</td>
+                    <td>{$item->ref('user', 'ID')->email}</td>
+                    <td>
+                        <a n:href="changeRole! $id,user" n:class="$item->ref('user', 'ID')->role == user? icon-bg"><i id="i3" class="fas fa-user"></i></a>
+                        <a n:href="changeRole! $id,manager" n:class="$item->ref('user', 'ID')->role == manager? icon-bg1"><i id="i4" class="fas fa-user"></i></a>
+                    </td>
+                    <td>
+                        {if $item->ref('user', 'ID')->verified == 0}
+                            <a n:href="VerVer! $id" class="aaa">Neoverený <i id="i6" class="fas fa-times"></i></a>
+                        {else}
+                            <a n:href="UnVerVer! $id" class="aaa">Overený <i id="i7" class="fas fa-check"></i></a>
+                        {/if}   
+                    </td>
+                    <td><a n:href="remove! $id "><i id="i5" class="fas fa-trash"></i></a></td>
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
+{/snippet}
+    <script>
+        $(".menuItem").removeClass('higlited');
+        $("#full").addClass('higlited');
+    </script>
+</div>
+{/block content}

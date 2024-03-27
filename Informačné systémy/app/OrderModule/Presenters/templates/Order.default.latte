@@ -1,0 +1,31 @@
+{block content}
+<div id="order">
+    {if $user->isAllowed('Knihovna')}<div id="order-back">
+        <a n:href="Orders: $order->ID_knihovna">zpet do knihovny</a></div>{/if}
+    {if $user->isAllowed('OrdersDView')}<div id="orderd-back"><a n:href="OrderDView: ">zpet do objednávek</a></div>{/if}
+    <h1>Objednávka: {$order->ID}</h1>
+    <p>Stav: {$order->stav}</p>
+
+    {if $user->isAllowed('Knihovna')}<p>Datum zalozenia: {$order->datum_zalozenia|date:'Y-m-d H:i:s'}</p>{/if}
+    <p>Datum podání: {$order->datum_podani|date:'Y-m-d H:i:s'}</p>
+    <p>Datum vyřízení: {$order->datum_vyrizeni|date:'Y-m-d H:i:s'}</p>
+    <p>Distributor: {$order->ID_uzivatel_distr}</p>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+    <table id="order-table">
+    <tr>
+        <th>Titul</th>
+        <th>Množsví</th>
+    </tr>
+        {foreach $items as $item}
+            <tr>
+                <td><a href="{link :Book:Kniha:show $item->ID_titul}">{$item->ID_titul}</a></td>
+                <td>{$item->mnozstvi}</td>
+            </tr>
+        {/foreach}
+    </table>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+    {if $user->isAllowed('OrdersDView')&&$order->stav=="odeslano"}<a n:href="vyridit! $order->ID">Vyřídit objednávku</a>{/if}
+</div>
+{/block content}

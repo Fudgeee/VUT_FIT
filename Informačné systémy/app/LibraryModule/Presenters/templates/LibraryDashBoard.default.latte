@@ -1,0 +1,15 @@
+{block content}
+<div id="library-dashboard">
+	{if $user->isAllowed('AdminPage')}<li><a n:href=":Library:LibraryAdd:">Přidat knihovnu</a></li>{/if}
+	<h1>Správa knihoven</h1>
+	{if $knihovny}
+		<ol>
+		{foreach $knihovny as $knihovna}
+			<div class="knihovnaItem">
+				<li><a href="{link Library: $knihovna->ID}">{$knihovna->ID}</a></li>
+			</div>
+		{/foreach}
+		</ol>
+	{/if}
+</div>
+{/block}

@@ -1,0 +1,126 @@
+<!---
+    @brief podání rezervace šablona
+    @autor jakub komárek (xkomar33)
+--->
+{block content}
+<div class=borrowPresenter>
+    <form n:name=rezervateForm class="rezervateForm">
+        <div class='borow'>
+            <div class='borowCont'>    
+                <table class=mainForm>
+                    <tr>
+                        <td>
+                            <p><label n:name=od>Od:</label> </p>
+                            <p><input class=invalidate n:name=od></p>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>
+                            <p><label n:name=do>Do:</label> </p>
+                            <p><input n:name=do class=invalidate> </p>
+                        </td>
+                    </tr>
+                </table>
+                <div id=more><p>Více nastavení</p><p id='ArowDown'>&#9660;</p><p id=ArowUp>&#9650;</p></div>
+                
+                <div class="hidenFilter">
+                    <table>
+                    
+                        <tr>
+                            <td><label n:name=pohon>Pohon</label></td>
+                            <td><select class=invalidate n:name=pohon></select></td>
+                        </tr>
+                        <tr>
+                            <td><label n:name=prevodovka>Převodovka</label></td>
+                            <td><select class=invalidate n:name=prevodovka></select></td>
+                        </tr>
+                        <tr>
+                            <td><label n:name=mist>Min. počet Míst</label> </td>
+                            <td><input class=invalidate n:name=mist></td>
+                        </tr>   
+                        <tr>
+                        <td><label n:name=dojezd>Min. dojezd (km)</label> </td>
+                            <td><select class=invalidate n:name=dojezd></select></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--<input id=hledat n:name=hledat> -->
+                {input hledat, class=>'ajax', data-ajax-validate=>'{"form":false}'}
+            </div>
+        </div >
+
+        <div class=searchedContentContainer>
+            <div class=searchedContent n:snippet="searchedCont">
+                {if isset($cars)}
+                    {foreach $cars as $car}
+                        <div class=carItem>
+                            <input class=resRadioButt type=radio name="sel[]" value={$car->ID} id={$car->ID}>
+                            <label for={$car->ID}>
+                                <img src="{$basePath}/{$car->photopath}">
+                                <div class=carCont>
+                                    <h2>{$car->brand}</h2>
+                                    <div class="info">
+                                        <p><i class="fas fa-bolt"></i>{$car->drive}</p>
+                                        <p><i class="fas fa-cogs"></i> {$car->prevodovka}</p>           
+                                        <p><i class="fas fa-user"></i> {$car->seats}</p>
+                                        <p><i class="fas fa-road"></i> {$car->dojezd} km</p>
+                                    </div>
+                                </div>
+                                <div class="loadbar">
+                                    <strong class="bar {$car->drive==Elektromobil?electro:diesel }" style='width:{$car->tank}%;};'></strong>
+                                    
+                                </div>
+                            </label> 
+                        </div>
+                    {else}
+                        <h1>Žádná shoda</h1>
+                    {/foreach}
+                {/if}
+            </div>
+        </div> 
+            <div class="rezervateMenu hiden support">
+                <input n:name=rezervovat id=RezButt>
+            </div>
+    </form>
+</div>
+<script>
+    if($("#blockA").width()<20){
+        $(".rezervateMenu").removeClass('support');
+    }
+    //potvrzující button
+    $(".carItem").click(function(){   
+          $('.rezervateMenu').slideDown( "slow");
+      });
+    //invalidace výsledků
+    $(".invalidate").change(function() {
+        $('.rezervateMenu').slideUp( "normal");
+        $('.searchedContentContainer').fadeOut( "normal");
+    });
+
+    //logika pro datumy
+    $( "#frm-rezervateForm-od" ).on('change',function() {
+        $( "#frm-rezervateForm-do" ).attr("value", ($( "#frm-rezervateForm-od" ).val()));
+        $( "#frm-rezervateForm-do" ).attr("min", ($( "#frm-rezervateForm-od" ).val()));
+    });
+    //zvíraznění položky v navigaci
+    $(".menuItem").removeClass('higlited');
+    $("#rezervovat").addClass('higlited');						
+
+    //menu script
+    $("#ArowUp").hide();
+    $("#more").click(function(){   
+        if ($(".hidenFilter").is(":hidden")) 
+        {
+            $(".hidenFilter").slideDown("slow");
+            $("#ArowUp").show();
+            $("#ArowDown").hide();
+        } 
+        else 
+        {
+            $(".hidenFilter").slideUp("slow");
+            $("#ArowUp").hide();
+            $("#ArowDown").show();
+        }    
+});
+</script>
+{/block content}

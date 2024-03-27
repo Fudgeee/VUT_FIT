@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>ITW - tvorba webových stránek</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    </head>
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        //smooth scrolling
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function(){
+                window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script> 
+        <header>
+            <div id="zahlavie">
+                <h1>
+                    <a href="index.html">ITW</a> 
+                </h1>
+                <h2>
+                    Tvorba webových stránek
+                </h2>
+            </div>    
+                <nav id="navg" class="navv">
+                    <ul id="zahlavi">
+                        <li>
+                            <a href="index.html" onclick="myFunction2()"><i class="fas fa-home"></i> Index</a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#tvorba" onclick="myFunction2()"><i class="fas fa-info-circle"></i><span class="text"> O předmětu</span></a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#prednasky" onclick="myFunction2()"><i class="fas fa-tv"></i><span class="text"> Přednášky</span></a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#prehlad" onclick="myFunction2()"><i class="fas fa-grin-beam-sweat"></i><span class="text"> Výsledky</span></a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#cvicenie" onclick="myFunction2()"><i class="fas fa-hammer"></i><span class="text"> Cvičení</span></a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#kontakt" onclick="myFunction2()"><i class="fas fa-envelope"></i><span class="text"> Kontakt</span></a>
+                        </li>
+                        <li class="nav2 resp">
+                            <a href="#ostatne" onclick="myFunction2()"><i class="fas fa-code-branch"></i><span class="text"> Související</span></a>
+                        </li>
+                        <li id="lastli">
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+                        </li>
+                    </ul>
+                </nav>    
+                <script>
+                    window.onscroll = function() {setUnsetSticky()};
+                    var navbar = document.getElementById("navg");
+                    var sticky = navbar.offsetTop;
+                    function setUnsetSticky() {
+                        if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky");
+                        } 
+                        else {
+                            navbar.classList.remove("sticky");
+                        }
+                    }  
+                </script>
+        </header>
+        <main>
+            <div id="predmet">
+                <section id="tvorba">
+                    <h2>O předmětu ITW - tvorba webových stránek</h2>
+                    <p>
+                        <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
+                        <br>
+                        <br>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </section>
+            </div>
+            <div id="tri">
+                <div id="dve">
+                    <section id="prednasky">
+                        <h2>Přednášky</h2>   
+                        <div id="predn">               
+                            <img src="icon1.gif" alt="icon1">
+                            <div class="pred"> 
+                                <p>
+                                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p01/index.html.cs">HTML a HTML5</a>
+                                    <hr>
+                                </p>  
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>  
+                            </div> 
+                        </div>  
+                        <div id="predn">              
+                            <img src="icon4.gif" alt="icon4">
+                            <div class="pred">  
+                                <p>
+                                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p02/index.html.cs">CSS a CSS3</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div>  
+                        </div> 
+                            <div id="predn">                                            
+                            <img src="icon3.gif" alt="icon3">
+                            <div class="pred"> 
+                                <p>
+                                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p03/index.html.cs">Tvorba Layoutu</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p> 
+                            </div>  
+                        </div> 
+                            <div id="predn">                                          
+                            <img src="icon2.gif" alt="icon2">
+                            <div class="pred"> 
+                                <p>
+                                    <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p04/index.html.cs">Optimalizace</a>
+                                    <hr>
+                                </p>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                            </div> 
+                        </div> 
+                    </section>
+                    <section id="prehlad">
+                        <br>
+                        <h2>Přehled výsledků</h2>
+                        
+                        <table>          
+                            <tr>
+                                <th rowspan="3">Meno</th>
+                                <th colspan="6">Body</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2">2010</th>
+                                <th colspan="2">2011</th>
+                                <th colspan="2">2012</th>
+                            </tr>
+                            <tr>
+                                <th>Polsem.</th>
+                                <th>Zk.</th>
+                                <th>Polsem.</th>
+                                <th>Zk.</th>
+                                <th>Polsem.</th>
+                                <th>Zk.</th>
+                            </tr>
+                            <tr>
+                                <td>Jan Novak</td>
+                                <td>18</td>
+                                <td>72</td>
+                                <td>20</td>
+                                <td>80</td>
+                                <td>10</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Zuzana Cerna</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>20</td>
+                                <td>75</td>
+                                <td>25</td>
+                                <td>99</td>
+                            </tr>
+                        </table>
+                    
+                    </section>
+                </div>
+                <div id="vpravo">
+                    <section id="cvicenie">
+                        <h2>Cvičení</h2>
+                        <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p01/index.html.cs">HTTP a DNS</a>
+                        <div class="tu">
+                            <img src="news_icon.gif" alt="news"> 
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.      
+                            </p>                                                   
+                        </div>
+                        <hr>                    
+                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p02/index.html.cs">Zaklady HTML</a>
+                        <div class="tu">
+                            <img src="news_icon.gif" alt="news">
+                            <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            </p>                     
+                        </div>
+                        <hr>
+                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p03/index.html.cs">Zaklady CSS</a>
+                        <div class="tu">
+                            <img src="news_icon.gif" alt="news">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            </div>
+                        <hr>
+                            <a href="https://www.fit.vutbr.cz/study/courses/ITW/private/prednasky/p04/index.html.cs">CSS3 a JavaScript</a>
+                        <div class="tu">
+                            <img src="news_icon.gif" alt="news">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div><hr>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="postfooter">
+                <div id="info">
+                    <section id="kontakt">
+                        <h2>Kontaktujte nás</h2>
+                        <dl>
+                            <dt>Garant:</dt>
+                            <dd>
+                                <a href="mailto:itw-garant@fit.vutbr.cz">itw-garant@fit.vutbr.cz</a>
+                            </dd>
+                            <dt>Prednasajuci:</dt>
+                            <dd>
+                                <a href="mailto:itw-prednasejici@fit.vutbr.cz">itw-prednasejici@fit.vutbr.cz</a>
+                            </dd>
+                            <dt>Cviciaci:</dt>
+                            <dd>
+                                <a href="mailto:itw-prednasejici@fit.vutbr.cz">itw-cvicici@fit.vutbr.cz</a>
+                            </dd>
+                        </dl>
+                    </section>
+                    <section id="ostatne">
+                        <h2>Související předměty</h2>
+                        <ul>
+                            <li>
+                                <a href="https://www.fit.vut.cz/study/course/IIS/.cs">Informační systémy</a>
+                            </li>
+                            <li>
+                                <a href="https://www.fit.vut.cz/study/course/PIS/.cs">Pokročilé informační systémy</a>
+                            </li>
+                            <li>
+                                <a href="https://www.fit.vut.cz/study/course/AIS/.cs">Analýza informačních systémů</a>
+                            </li>
+                            <li>
+                                <a href="https://www.fit.vut.cz/study/course/14023/.cs">Skriptovací jazyky</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navg");
+                if (x.className === "navv") {
+                    x.className += " responsive";
+                } 
+                else {
+                    x.className = "navv";
+                }
+            }
+        </script>
+        <script>
+            function myFunction2() {
+              var x = document.getElementById("navg");
+              if (x.className === "navv") {
+            
+              } else {
+                x.className = "navv";
+              }
+            }
+        </script>
+    </body>
+</html>

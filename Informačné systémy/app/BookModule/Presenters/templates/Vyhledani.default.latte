@@ -1,0 +1,27 @@
+{block content}
+<div id="book-hladanie">
+	{if $user->isAllowed('Knihy')}<div id="add-book"><a href="{link BookAdd: }">Vytvořit nový titul</a></div>{/if}
+	<h1>Vyhledávání knih</h1>
+	<div id="book-hladanie-formular">
+		{control vyhledaniForm}
+	</div>
+	<div id="book-vyhladane">
+		{if $knihy}
+		<table>
+		<tr>
+			<th>Titul</th>
+			<th>Žánr/y</th>
+			<th>Tagy/y</th>
+		</tr>
+		{foreach $knihy as $kniha}
+			<tr>
+				<td><a href="{link Kniha:show $kniha->ID}">{$kniha->ID}</a></td>
+				<td>{$kniha->zanry}</td>
+				<td>{$kniha->tagy}</td>
+			</tr>
+		{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+{/block content}

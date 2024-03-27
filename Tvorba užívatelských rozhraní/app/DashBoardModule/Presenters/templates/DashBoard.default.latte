@@ -1,0 +1,53 @@
+<!---
+    @brief dashboard šablona
+    @autor Adrián Matušík (xmatus35)
+--->
+{block content}
+<div id='db'>
+    <h1>Moje Rezervácie:</h1>
+    {foreach $reservations as $reservation}
+        <div class="db-img">
+            <div class="db-img-popis hidden">
+                <p>{$reservation->ref('car', 'ID_car')->brand}</p>
+                <p>Dátum rezervácie: {$reservation->datum_rezervacie|date: 'd.m h:i'}</p>
+                <p>Dátum vrátenia: {$reservation->datum_vratenia|date: 'd.m h:i'}</p>
+                <p>Dojazd: {$reservation->ref('car', 'ID_car')->dojezd} km</p>
+            </div>
+            <a n:href="DeleteReservation1! $reservation->ID"><i id="i1" class="fas fa-trash"></i></a>
+            <a n:href=":DashBoard:Rezervation: $reservation->ID" class="menuItem noajax"><i class="fas fa-external-link-alt"></i></a>
+            <a n:href=":DashBoard:Rezervation: $reservation->ID" class="menuItem noajax"><img src="{$basePath}/{$reservation->ref('car', 'ID_car')->photopath}"></a>
+        </div>
+    {/foreach}
+    <div id="db-add">
+        <a n:href=":Borow:Borow: " class=menuItem>
+            <div id="btn">+</div>
+            <img class="btn-class btn-hover" src="{$basePath}/ITUimg/mercedes_s.jpg">
+        </a>
+    </div>
+    <script>
+        //zvýraznenie položky v navigaci
+        $(".menuItem").removeClass('higlited');
+        $("#prehled").addClass('higlited');		
+    </script>
+    <script>
+        //skrytie popisu rezervácie na hover
+        $(".db-img").hover(mouseEnter, mouseLeave);
+        function mouseEnter(event) {
+            $(this).children('.db-img-popis').toggleClass('hidden').animate({},'slow');
+        };
+        function mouseLeave(event) {
+            $(this).children('.db-img-popis').addClass('hidden').animate({},'slow');
+        }; 
+    </script>
+    <script>
+        //zmena opacity na obrazku pod ADD button
+        $("#btn").hover(mouseEnter, mouseLeave);
+        function mouseEnter(event) {
+            $(this).siblings('.btn-class').toggleClass('btn-hover');
+        };
+        function mouseLeave(event) {
+            $(this).siblings('.btn-class').addClass('btn-hover');
+        }; 
+    </script>
+</div>
+{/block content}

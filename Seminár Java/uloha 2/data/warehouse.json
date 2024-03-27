@@ -1,0 +1,495 @@
+{
+  "shelves": [
+    {
+      "posx": 1,
+      "posy": 1,
+      "id": 1
+    },
+    {
+      "posx": 1,
+      "posy": 2,
+      "id": 2
+    },
+    {
+      "posx": 1,
+      "posy": 3,
+      "id": 3
+    },
+    {
+      "posx": 1,
+      "posy": 6,
+      "id": 4
+    },
+    {
+      "posx": 1,
+      "posy": 7,
+      "id": 5
+    },
+    {
+      "posx": 1,
+      "posy": 8,
+      "id": 6
+    },
+    {
+      "posx": 3,
+      "posy": 1,
+      "id": 7
+    },
+    {
+      "posx": 3,
+      "posy": 2,
+      "id": 8
+    },
+    {
+      "posx": 3,
+      "posy": 3,
+      "id": 9
+    },
+    {
+      "posx": 3,
+      "posy": 6,
+      "id": 10
+    },
+    {
+      "posx": 3,
+      "posy": 7,
+      "id": 11
+    },
+    {
+      "posx": 3,
+      "posy": 8,
+      "id": 12
+    },
+    {
+      "posx": 5,
+      "posy": 1,
+      "id": 13
+    },
+    {
+      "posx": 5,
+      "posy": 2,
+      "id": 14
+    },
+    {
+      "posx": 5,
+      "posy": 3,
+      "id": 15
+    },
+    {
+      "posx": 5,
+      "posy": 6,
+      "id": 16
+    },
+    {
+      "posx": 5,
+      "posy": 7,
+      "id": 17
+    },
+    {
+      "posx": 5,
+      "posy": 8,
+      "id": 18
+    },
+    {
+      "posx": 7,
+      "posy": 1,
+      "id": 19
+    },
+    {
+      "posx": 7,
+      "posy": 2,
+      "id": 20
+    },
+    {
+      "posx": 7,
+      "posy": 3,
+      "id": 21
+    },
+    {
+      "posx": 7,
+      "posy": 6,
+      "id": 22
+    },
+    {
+      "posx": 7,
+      "posy": 7,
+      "id": 23
+    },
+    {
+      "posx": 7,
+      "posy": 8,
+      "id": 24
+    },
+    {
+      "posx": 9,
+      "posy": 1,
+      "id": 25
+    },
+    {
+      "posx": 9,
+      "posy": 2,
+      "id": 26
+    },
+    {
+      "posx": 9,
+      "posy": 3,
+      "id": 27
+    },
+    {
+      "posx": 9,
+      "posy": 6,
+      "id": 28
+    },
+    {
+      "posx": 9,
+      "posy": 7,
+      "id": 29
+    },
+    {
+      "posx": 9,
+      "posy": 8,
+      "id": 30
+    }
+  ],
+  "items": [
+    {
+      "name": "monitor 22\" Dell P2217 Professional WFP",
+      "quantity": 50,
+      "weight": 8.2
+    },
+    {
+      "name": "monitor 24\" MSI Optix G241",
+      "quantity": 72,
+      "weight": 8.1
+    },
+    {
+      "name": "monitor 27\" AOC C27G2ZU/BK Gaming",
+      "quantity": 124,
+      "weight": 9.4
+    },
+    {
+      "name": "mouse A4tech Bloody V7",
+      "quantity": 570,
+      "weight": 0.9
+    },
+    {
+      "name": "mouse A4tech Bloody V8",
+      "quantity": 625,
+      "weight": 0.9
+    },
+    {
+      "name": "mouse A4tech Bloody R70",
+      "quantity": 497,
+      "weight": 0.9
+    },
+    {
+      "name": "keyboard A4tech Bloody B188",
+      "quantity": 712,
+      "weight": 1.2
+    },
+    {
+      "name": "keyboard A4tech Bloody B810R",
+      "quantity": 385,
+      "weight": 1.2
+    },
+    {
+      "name": "speakers JBL Quantum Duo",
+      "quantity": 264,
+      "weight": 3.4
+    },
+    {
+      "name": "headset HyperX Cloud 2",
+      "quantity": 310,
+      "weight": 2.3
+    },
+    {
+      "name": "headset Razer Kraken green",
+      "quantity": 499,
+      "weight": 3.2
+    },
+    {
+      "name": "microphone HyperX QuadCast",
+      "quantity": 357,
+      "weight": 1.8
+    },
+    {
+      "name": "microphone HyperX SoloCast",
+      "quantity": 546,
+      "weight": 1.6
+    },
+    {
+      "name": "camera Logitech C922 PRO",
+      "quantity": 768,
+      "weight": 1.2
+    },
+    {
+      "name": "processor Intel Core i5-10400F",
+      "quantity": 185,
+      "weight": 0.8
+    },
+    {
+      "name": "processor Intel Core i7-9700K",
+      "quantity": 162,
+      "weight": 0.8
+    },
+    {
+      "name": "processor Intel Core i7-11700K",
+      "quantity": 104,
+      "weight": 0.8
+    },
+    {
+      "name": "processor Intel Core i9-10850K",
+      "quantity": 92,
+      "weight": 0.8
+    },
+    {
+      "name": "processor Intel Core i9-10980XE",
+      "quantity": 43,
+      "weight": 0.8
+    },
+    {
+      "name": "gpu Nvidia RTX2060",
+      "quantity": 459,
+      "weight": 1.7
+    },
+    {
+      "name": "gpu Nvidia RTX3060",
+      "quantity": 267,
+      "weight": 1.8
+    },
+    {
+      "name": "gpu Nvidia RTX3090",
+      "quantity": 124,
+      "weight": 1.8
+    },
+    {
+      "name": "ram HyperX 8GB DDR4",
+      "quantity": 664,
+      "weight": 0.9
+    },
+    {
+      "name": "ram HyperX 16GB DDR4",
+      "quantity": 558,
+      "weight": 0.9
+    },
+    {
+      "name": "ram HyperX 32GB DDR4",
+      "quantity": 366,
+      "weight": 0.9
+    },
+    {
+      "name": "ssd Samsung 860 EVO 250GB",
+      "quantity": 986,
+      "weight": 1.7
+    },
+    {
+      "name": "ssd Samsung 860 EVO 500GB",
+      "quantity": 858,
+      "weight": 1.8
+    },
+    {
+      "name": "ssd Samsung 860 EVO 1000GB",
+      "quantity": 644,
+      "weight": 1.8
+    },
+    {
+      "name": "hdd Seagate BarraCuda 1 TB",
+      "quantity": 748,
+      "weight": 2.9
+    },
+    {
+      "name": "hdd Seagate BarraCuda 2 TB",
+      "quantity": 658,
+      "weight": 3.0
+    },
+    {
+      "name": "hdd Seagate BarraCuda 10 TB",
+      "quantity": 262,
+      "weight": 3.1
+    },
+    {
+      "name": "processor AMD Ryzen 5 3600",
+      "quantity": 365,
+      "weight": 0.8
+    },
+    {
+      "name": "procesor AMD Ryzen 9 3900X",
+      "quantity": 642,
+      "weight": 0.8
+    },
+    {
+      "name": "gpu Nvidia GTX1060",
+      "quantity": 212,
+      "weight": 1.9
+    },
+    {
+      "name": "motherboard MSI MAG Z490 TOMAHAWK",
+      "quantity": 485,
+      "weight": 2.1
+    },
+    {
+      "name": "motherboard ASUS ROG MAXIMUS XII HERO",
+      "quantity": 175,
+      "weight": 2.2
+    },
+    {
+      "name": "motherboard MSI MPG Z390 GAMING PLUS",
+      "quantity": 252,
+      "weight": 2.1
+    },
+    {
+      "name": "ram HyperX 64GB DDR4",
+      "quantity": 118,
+      "weight": 0.9
+    },
+    {
+      "name": "tower Fractal Design Define 7 XL",
+      "quantity": 984,
+      "weight": 9.8
+    },
+    {
+      "name": "tower Cougar Panzer EVO RGB",
+      "quantity": 451,
+      "weight": 9.2
+    },
+    {
+      "name": "power-suply EVOLVEO Pulse 400 W",
+      "quantity": 742,
+      "weight": 4.0
+    },
+    {
+      "name": "power-suply Corsair RM650",
+      "quantity": 584,
+      "weight": 3.8
+    },
+    {
+      "name": "power-suply EVGA SuperNOVA 750 G5",
+      "quantity": 361,
+      "weight": 3.9
+    },
+    {
+      "name": "usb 8GB",
+      "quantity": 1254,
+      "weight": 0.1
+    },
+    {
+      "name": "usb 16GB",
+      "quantity": 998,
+      "weight": 0.1
+    },
+    {
+      "name": "usb 32GB",
+      "quantity": 882,
+      "weight": 0.1
+    },
+    {
+      "name": "usb 64GB",
+      "quantity": 799,
+      "weight": 0.1
+    },
+    {
+      "name": "usb 128GB",
+      "quantity": 513,
+      "weight": 0.1
+    },
+    {
+      "name": "monitor 49\" Samsung C49J89",
+      "quantity": 93,
+      "weight": 13.2
+    },
+    {
+      "name": "mouse Logitech G102 Lightsync",
+      "quantity": 870,
+      "weight": 0.8
+    },
+    {
+      "name": "keyboard SteelSeries Apex 7",
+      "quantity": 131,
+      "weight": 1.5
+    }
+  ],
+  "orders": [
+    {
+      "order1": [
+        {
+          "name": "monitor 49\" Samsung C49J89",
+          "quantity": 1,
+          "weight": 13.2
+        },
+        {
+          "name":"mouse A4tech Bloody V8",
+          "quantity": 1,
+          "weight": 0.9
+        }
+      ],
+      "order2": [
+        {
+          "name": "ram HyperX 64GB DDR4",
+          "quantity": 2,
+          "weight": 0.9
+        },
+        {
+          "name": "power-suply EVGA SuperNOVA 750 G5",
+          "quantity": 1,
+          "weight": 3.9
+        },
+        {
+          "name": "gpu Nvidia RTX3080",
+          "quantity": 1,
+          "weight": 1.8
+        },
+        {
+          "name": "ssd Samsung 860 EVO 1000GB",
+          "quantity": 2,
+          "weight": 1.8
+        },
+        {
+          "name": "motherboard MSI MPG Z390 GAMING PLUS",
+          "quantity": 1,
+          "weight": 2.1
+        },
+        {
+          "name": "processor Intel Core i9-10980XE",
+          "quantity": 1,
+          "weight": 0.8
+        },
+        {
+          "name": "tower Cougar Panzer EVO RGB",
+          "quantity": 1,
+          "weight": 9.2 
+        }
+      ],
+      "order3": [
+        {
+          "name": "monitor 24\" MSI Optix G241",
+          "quantity": 3,
+          "weight": 8.1
+        }
+      ],
+      "order4": [
+        {
+          "name": "usb 128GB",
+          "quantity": 10,
+          "weight": 0.1
+        },
+        {
+          "name": "hdd Seagate BarraCuda 10 TB",
+          "quantity": 4,
+          "weight": 3.1
+        }
+      ],
+      "order5": [
+        {
+          "name": "mouse A4tech Bloody R70",
+          "quantity": 5,
+          "weight": 0.9
+        },
+        {
+          "name": "keyboard A4tech Bloody B810R",
+          "quantity": 5,
+          "weight": 1.2
+        }
+      ]
+    }
+  ]
+}

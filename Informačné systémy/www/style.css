@@ -1,0 +1,512 @@
+body{
+    font-family: "Bahnschrift";
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url(img/Library-Wallpaper-11-1500x1000-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 100px;
+}
+#navigace{
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    overflow: hidden;
+    width: 300px;
+    display: block;
+    background-color: #a36b16;
+    border-right: 3px solid black;
+}
+#kontent{
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 270px;
+    top: 25%;
+    left: 40%;
+}
+h1{
+    font-size: 4.5rem;
+    color: rgb(207, 219, 221);
+    text-shadow: 3px 3px black;
+    width: 568px;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+a:hover,
+a:focus{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li:first-child{
+    margin-top: 2rem;
+}
+li{
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9af58;
+}
+ul li a:hover,
+ul li a:focus{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#btn{
+    box-sizing: border-box;
+    padding: 1rem 0;
+    background-color: white;
+    opacity: 75%;
+    border: none;
+    width: 400px;
+    margin: 0 84px;
+}
+#kontent a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: #674112;
+    opacity: 100% !important;
+    padding: 20px 43px;
+}
+#kontent a:hover,
+#kontent a:focus{
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+#btn:hover,
+#btn:focus{
+    opacity: 95%;
+}
+#registracia,
+#login,
+#user-edit,
+#libraries-view,
+#library-dashboard{
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 55%;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    background-color: white;
+    opacity: 80%;
+    border: none;
+    padding-bottom: 28px;
+}
+#library-dashboard{
+    height: 60%;
+    overflow: auto;
+    padding: 20px;
+}
+#registracia h1,
+#login h1,
+#book-hladanie h1,
+#user-edit h1,
+#libraries-view h1,
+#library-dashboard h1{
+    color: #462b0a;
+    text-shadow: 2px 2px #e9af58;
+}
+#libraries-view{
+    height: 70%;
+    overflow: auto;
+}
+#user-edit h1,
+#library-dashboard h1{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+#registracia-formular{
+    width: 317px;
+    padding-right: 25px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+#login-formular{
+    width: 235px;
+    padding-right: 25px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.button{
+    padding: 1rem;
+    font-size: 24px;
+    margin-top: 2rem;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    opacity: 1;
+    position: relative;
+    cursor: pointer;
+}
+#login a,
+#library-view a{
+    display: block;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 24px;
+    padding-left: 35px;
+    font-weight: 600;
+}
+#library-view a{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+#login a:hover,
+#login a:focus,
+#library-view a:hover,
+#library-view a:focus,
+#tabulka-books td a:hover,
+#tabulka-books td a:focus{
+    text-decoration: underline;
+    text-underline-offset: 4px; 
+}
+#book-hladanie,
+#user-borrows,
+#library-view,
+#book-show,
+#book-add,
+#book-edit,
+#library,
+#knihovnik-borrows,
+#borrow,
+#lib-books,
+#lib-books-manual-edit,
+#lib-books-manual-add,
+#orders,
+#order-edit,
+#order,
+#library-edit,
+#ordersd,
+#library-add,
+#library-addk,
+#user-admin,
+#user-admin-create,
+#user-admin-edit{
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 70%;
+    height: 74%;
+    top: 13%;
+    left: 25%;
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: white;
+    opacity: 90%;
+    border: none;
+    padding-bottom: 28px;
+}
+#library-view,
+#book-show,
+#book-edit,
+#knihovnik-borrows,
+#lib-books,
+#lib-books-manual-edit,
+#lib-books-manual-add,
+#orders,
+#order-edit,
+#order,
+#library-edit,
+#ordersd,
+#library-add,
+#library-addk,
+#library-dashboard,
+#user-admin,
+#user-admin-create,
+#user-admin-edit{
+    overflow: auto;
+}
+#book-hladanie h1,
+#user-borrows h1,
+#library-view h1,
+#book-show h1,
+#book-add h1,
+#book-edit h1,
+#library h1,
+#knihovnik-borrows h1,
+#borrow h1,
+#lib-books h1,
+#lib-books-manual-edit h1,
+#orders h1,
+#lib-books-manual-add h1,
+#order-edit h1,
+#order h1,
+#library-edit h1,
+#ordersd h1,
+#library-add h1,
+#library-addk h1,
+#user-admin h1,
+#user-admin-create h1,
+#user-admin-edit h1{
+    width: 568px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #462b0a;
+    text-shadow: 2px 2px #e9af58;
+}
+#library-view h1,
+#book-edit h1,
+#library h1,
+#knihovnik-borrows h1,
+#borrow h1,
+#lib-books h1,
+#lib-books-manual-edit h1,
+#lib-books-manual-add h1,
+#orders h1,
+#order-edit h1,
+#order h1,
+#library-edit h1,
+#ordersd h1,
+#library-add h1,
+#library-addk h1,
+#user-admin h1,
+#user-admin-create h1,
+#user-admin-edit h1{
+    width: unset;
+    font-size: 3.5rem;
+}
+#book-hladanie-formular{
+    width: 40%;
+    height: 275px;
+    padding: 30px 0;
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    font-size: 20px;
+}
+#frm-vyhledaniForm-typZaznamu,
+#frm-bookAddForm-ID_titul,
+#frm-bookAddForm-mnozstvi,
+#frm-itemCreateForm-mnozstvi,
+#frm-itemCreateForm-ID_titul,
+#frm-sendCreateForm-ID_uzivatel_distr,
+#frm-admCreateProfileForm-role,
+#frm-admEditProfileForm-role{
+    width: 170.4px;
+    height: 22px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0;
+}
+#book-vyhladane{
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    padding: 30px;
+    height: 320px;
+    overflow: auto;
+}
+#book-vyhladane th{
+    padding-bottom: 25px;
+}
+#book-vyhladane td{
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: left;
+}
+#book-vyhladane td:not(:first-child){
+    padding-left: 60px;
+}
+#user-edit-formular{
+    width: 317px;
+    padding-right: 50px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+#user-borrows th,
+#user-borrows td{
+    width: 16.66%;
+    padding: 0 30px;
+}
+#libraries-list a{
+    font-size: 24px !important;
+}
+#libraries-list a{
+    text-decoration: none;
+}
+.medzera{
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    display: block;
+}
+#tabulka-books{
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    font-size: 20px;
+    border: 1.7px solid black;
+    padding: 20px;
+}
+#order-edit-table{
+    width: 50%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    font-size: 20px;
+    border: 1.7px solid black;
+    padding: 20px;
+}
+#tabulka-books th,
+#tabulka-books td{
+    padding-right: 20px;
+}
+#tabulka-books th{
+    padding-bottom: 15px;
+}
+#tabulka-books td a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+#add-book,
+#book-edit-back,
+#library-back,
+#knihovnik-borrows-back,
+#borrow-back,
+#lib-books-back,
+#lib-books h1,
+#lib-books-manual-edit-back,
+#orders-back,
+#orders h1,
+#order-edit-back,
+#lib-books-manual-add-back,
+#order-back,
+#library-edit-back,
+#ordersd h1,
+#orderd-back,
+#library-add-back,
+#library-addk-back,
+#user-admin-back,
+#user-admin-create-back,
+#user-admin-edit-back{
+    margin-bottom: 15px;
+}
+#book-add p,
+#lib-books-manual-edit p{
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+#book-add-formular,
+#book-edit-formular-1,
+#lib-books-manual-edit-formular,
+#lib-books-manual-add-formular,
+#order-edit-formular-1,
+#library-add-formular,
+#library-addk-formular,
+#user-admin-create-formular{
+    width: 290px;
+    margin: 0 auto;
+    padding-right: 35px;
+}
+#order-edit-formular-2{
+    width: 700px;
+    margin: 0 auto;
+}
+#user-admin-edit-formular{
+    width: 450px;
+    margin: 0 auto;
+}
+#book-edit-formular-2{
+    width: 290px;
+    margin: 0 auto;
+    padding-left: 55px;
+}
+#library-edit-formular{
+    width: 555px;
+    margin: 0 auto;
+}
+#library ul li a{
+    color: #462b0a;
+    font-size: 26px;
+    font-weight: 900;
+}
+#knihovnik-table th,
+#knihovnik-table td{
+    padding-right: 18px;
+}
+#knihovnik-table th,
+#user-admin-table th{
+    padding-bottom: 10px;
+}
+#book-edit ul li a,
+#lib-books > a,
+#orders > a{
+    color: blue;
+    font-size: 26px;
+    font-weight: 900; 
+}
+#lib-books > a{
+    font-size: 20px;
+}
+#lib-books-table,
+#orders-table,
+#order-edit-table,
+#order-table,
+#ordersd-table,
+#library-addk-table,
+#user-admin-table{
+    margin: 0 auto;
+}
+#lib-books-table th,
+#lib-books-table td,
+#orders-table th,
+#orders-table td,
+#ordersd-table th,
+#ordersd-table td{
+    padding-right: 50px;
+}
+#library-addk-table th,
+#library-addk-table td,
+#user-admin-table th,
+#user-admin-table td{
+    padding-right: 80px;
+}
+#lib-books-table th,
+#orders-table th,
+#order-edit-table th,
+#ordersd-table th{
+    padding-bottom: 20px;
+}
+#order-edit-table th,
+#order-edit-table td{
+    width: 35%;
+}
+#order-edit-table th:first-child,
+#order-edit-table td:first-child{
+    width: 50%;
+}
+#order-table tr{
+    width: 50%;
+}
+#order-table th,
+#order-table td{
+    width: 50%;
+}
+#library-edit-formular textarea{
+    width: 400px;
+    height: 100px;
+}

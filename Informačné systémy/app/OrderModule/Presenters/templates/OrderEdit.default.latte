@@ -1,0 +1,33 @@
+{block content}
+<div id="order-edit">
+    <div id="order-edit-back">
+        <a n:href="Orders: $order->ID_knihovna">Zpět</a>
+    </div>
+    <h1>Editace objednávky: {$order->ID}</h1>
+
+    <table id="order-edit-table">
+    <tr>
+        <th>Titul</th>
+        <th>Množsví</th>
+        <th>Odstranit</th>
+    </tr>
+        {foreach $items as $item}
+            <tr>
+                <td><a href="{link :Book:Kniha:show $item->ID_titul}">{$item->ID_titul}</a></td>
+                <td>{$item->mnozstvi}</td>
+                <td><a n:href="DeleteItem! $order->ID,$item->ID_titul">Odstranit</a></td>
+            </tr>
+        {/foreach}
+    </table>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+    <div id="order-edit-formular-1">
+        {control itemCreateForm}
+    </div>
+    <div class="medzera"></div>
+    <div class="medzera"></div>
+    <div id="order-edit-formular-2">
+        {control sendCreateForm}
+    </div>
+</div>
+{/block content}
