@@ -1,0 +1,1 @@
+# Praktické aspekty vývoje software
