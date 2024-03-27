@@ -1,1 +1,0 @@
-# Základy umělé inteligence
