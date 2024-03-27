@@ -1,1 +1,0 @@
-# Elektronika pro informační technologie
