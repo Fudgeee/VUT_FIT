@@ -1,1 +1,0 @@
-### Projekt 1 - práca s textom
