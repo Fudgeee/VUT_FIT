@@ -1,1 +1,0 @@
-Úloha: spraviť stránku
