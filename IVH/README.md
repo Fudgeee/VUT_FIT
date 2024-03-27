@@ -1,1 +1,0 @@
-# Seminář VHDL
