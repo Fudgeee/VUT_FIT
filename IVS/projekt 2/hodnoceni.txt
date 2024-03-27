@@ -1,5 +1,0 @@
-xbella01 100 (matematická knihovna, pokročilé mat. funkce, TDD testy matematickej knižnice, makefile, code review, mockup)
-xmatus35 100 (GUI, help obrazovka, příručka, mockup, dokumentace, code review)
-xvrabl05 100 (profiling, instalátor, makefile, mockup, code review)
-
-
