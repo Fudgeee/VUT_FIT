@@ -1,1 +1,0 @@
-# Mikroprocesorové a vestavěné systémy
