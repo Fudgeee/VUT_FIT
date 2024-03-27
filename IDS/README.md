@@ -1,1 +1,0 @@
-# Databázové systémy
