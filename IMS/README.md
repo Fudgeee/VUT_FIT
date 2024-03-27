@@ -1,1 +1,1 @@
-# IMS project
+# Modelování a simulace
